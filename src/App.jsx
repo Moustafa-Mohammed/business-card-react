@@ -1,14 +1,14 @@
 import InfoSection from "./components/InfoSection";
-import About from "./components/About";
+import Main from "./components/Main";
 import Footer from "./components/Footer";
 
 import "./App.css";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <InfoSection />
-      <About />
+      <Main />
       <Footer />
     </div>
   );

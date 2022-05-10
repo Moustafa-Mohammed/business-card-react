@@ -6,21 +6,23 @@ import logo from "../images/photo.webp";
 
 function InfoSection() {
   return (
-    <div className="container">
-      <img src={logo} alt="" />
-      <h1>Mostafa Mohamed</h1>
-      <h3>Frontend Developer</h3>
-      <div>
-        <a href="#">
-          <MdEmail />
-          <span>Email</span>
-        </a>
-        <a href="#">
-          <FaLinkedin />
-          <span>Linkedin</span>
-        </a>
+    <section>
+      <img src={logo} alt="developer photo" className="logo" />
+      <div className="container">
+        <h1 className="main--heading">Mostafa Mohamed</h1>
+        <h5 className="secondary--heading">Frontend Developer</h5>
+        <div className="btn-group">
+          <a href="#" className="btn btn--white">
+            <MdEmail style={{ marginRight: "1rem" }} />
+            <span>Email</span>
+          </a>
+          <a href="#" className="btn btn--primary">
+            <FaLinkedin style={{ marginRight: "1rem" }} />
+            <span>Linkedin</span>
+          </a>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
