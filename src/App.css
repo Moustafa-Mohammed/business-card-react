@@ -16,18 +16,33 @@ body {
 .app {
   margin: 0 auto;
   width: 32.5rem;
-  background-color: #1a1b21;
   margin-top: 2rem;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
 }
 
 .container {
   padding: 1.5rem 3rem;
 }
 
-.logo {
+.card-img--container {
   display: block;
   width: 100%;
   border-radius: 10px 10px 0 0;
+  background-image: url("./images/photo.webp");
+  background-position: center;
+  background-size: cover;
+  height: 25rem;
+  transition: all 3s;
+}
+
+.card-img--container:hover {
+  transform: scale(1.1);
+  transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 }
 
 .main--heading {
@@ -41,6 +56,7 @@ body {
   font-size: 1.3rem;
   line-height: 1.5rem;
   text-align: center;
+  font-weight: 400;
 }
 
 .sub-heading {
@@ -52,6 +68,7 @@ body {
 .text {
   font-size: 1.1rem;
   line-height: 1.6rem;
+  margin-bottom: 2rem;
 }
 
 .btn-group {
@@ -75,6 +92,15 @@ body {
   font-size: 1.4rem;
   line-height: 1.6rem;
   width: 50%;
+  transition: transform 0.1s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(1px);
 }
 
 .btn--primary {
@@ -89,7 +115,6 @@ body {
 }
 
 .footer {
-  background-color: #000;
   border-radius: 0 0 10px 10px;
 }
 
@@ -99,7 +124,83 @@ body {
   align-items: center;
 }
 
-.social--icon {
+.social-icon--container {
   width: 2.5rem;
   height: 2.5rem;
+  transition: 0.1s;
+}
+
+.social-icon--container:hover {
+  background-color: #2196f3;
+}
+
+.social-icon {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 34px;
+  margin: 2rem auto 0 auto;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
